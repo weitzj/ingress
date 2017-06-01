@@ -64,11 +64,18 @@ rules:
   - apiGroups:
       - ""
     resources:
-      - configmaps
       - pods
       - secrets
     verbs:
       - get
+  - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    verbs:
+      - create
+      - get
+      - update
   - apiGroups:
       - ""
     resources:
